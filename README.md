@@ -20,7 +20,7 @@
 ## Descrição do projeto 
 
 <p align="justify">
- Sistema de cadastro de produtos desenvolvido para a disciplina de desenvolvimento web da faculdade
+ Sistema de cadastro de produtos desenvolvido para a conclusão da disciplina de desenvolvimento web 
 </p>
 
 ## Funcionalidades
