@@ -1,9 +1,10 @@
 
-  <h1>Controle de produtos</h1> 
+  <h1>ProductTracker</h1> 
 
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=Python&message=3.1.10&color=blue&style=for-the-badge&logo=netlify"/>
-  <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge"/>
+  <img src="https://img.shields.io/static/v1?label=Django&message=5.0.1&color=green&style=for-the-badge&logo=netlify"/>
+
 </p>
 
 ### Tópicos 
@@ -15,24 +16,39 @@
 ## Descrição do projeto 
 
 <p align="justify">
- Uma assistente virtual para ajudar com tarefas e lembretes diários
+ Sistema de cadastro de produtos desenvolvido para a disciplina de desenvolvimento web da faculdade
 </p>
 
 ## Funcionalidades
 
-:heavy_check_mark: Avisos de reunião
+:heavy_check_mark: Cadastro e Login de usuários
+:heavy_check_mark: Definição das permissões dos usuários
+:heavy_check_mark: Edição de usuários
+:heavy_check_mark: Adição de produtos
+:heavy_check_mark: Edição de produtos
+:heavy_check_mark: Remover produto
 
-:heavy_check_mark: Configuração de lembretes
+## Rotas
 
-:heavy_check_mark: Rotinas 
+'/'
+'/produtos/criar/'
+'/produtos/editar/slug'
+'/produtos/excluir/slug'
+'/produtos/slug/'
+'/users/login/'
+'/users/cadastro/'
+'/users/logout/'
+'/users/reset/'
+'/users/reset/done'
+'/users/painel/'
+'/users/painel/id'
+'/users/editar/id'
 
-## Exemplos
+## Deploy
 
-![image](https://github.com/najulia/aluninha/assets/62626492/ffc2ff41-49b1-4c09-853a-e011a5cada35)
+Em desenvolvimento
 
-![image](https://github.com/najulia/aluninha/assets/62626492/9fa097fc-799d-482f-8dc2-e5ea172196cc)
-
-
+Desenvolvido por anaoliv
 ## Licença 
 
 The [MIT License]() (MIT)
