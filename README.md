@@ -10,8 +10,11 @@
 ### Tópicos 
 
 :small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
+
 :small_blue_diamond: [Funcionalidades](#funcionalidades)
+
 :small_blue_diamond: [Rotas](#rotas)
+
 :small_blue_diamond: [Deploy](#deploy)
 
 ## Descrição do projeto 
@@ -32,17 +35,29 @@
 ## Rotas
 
 '/'
+
 '/produtos/criar/'
+
 '/produtos/editar/slug'
+
 '/produtos/excluir/slug'
+
 '/produtos/slug/'
+
 '/users/login/'
+
 '/users/cadastro/'
+
 '/users/logout/'
+
 '/users/reset/'
+
 '/users/reset/done'
+
 '/users/painel/'
+
 '/users/painel/id'
+
 '/users/editar/id'
 
 ## Deploy
