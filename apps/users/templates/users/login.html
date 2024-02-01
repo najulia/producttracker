@@ -1,0 +1,11 @@
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Salvar">
+</form>
+
+<a href="{% url 'produto-list' %}">Voltar</a>
+<form method="post" action="{% url 'reset' %}">
+    {% csrf_token %}
+    <button type="submit">Esqueci minha senha</button>
+</form>

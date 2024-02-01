@@ -1,0 +1,9 @@
+{% load static %}
+
+<h1>{{ object.username }}</h1>
+{% if object.is_staff is True %}
+<p>Usuário é staff</p>
+{%else%}
+<p>Usuário padrão</p>
+{%endif%}
+

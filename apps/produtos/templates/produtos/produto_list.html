@@ -1,0 +1,17 @@
+<h1>Produtos</h1>
+<ul>
+{% for produto in produto_list %}
+    <a href="{% url 'produto-detail' produto.slug %}"> <li>{{ produto.titulo }} - {{ produto.preco }}</li>
+{% empty %}
+    <li>No produtos yet.</li>
+{% endfor %}
+
+<a href="{% url 'produtos-create' %}">Cadastrar produto</a>
+
+<form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">logout</button>
+</form>
+
+
+</ul>
