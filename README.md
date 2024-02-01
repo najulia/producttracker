@@ -26,10 +26,15 @@
 ## Funcionalidades
 
 :heavy_check_mark: Cadastro e Login de usuários
+
 :heavy_check_mark: Definição das permissões dos usuários
+
 :heavy_check_mark: Edição de usuários
+
 :heavy_check_mark: Adição de produtos
+
 :heavy_check_mark: Edição de produtos
+
 :heavy_check_mark: Remover produto
 
 ## Rotas
