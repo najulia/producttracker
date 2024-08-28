@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Editar produto</title>
+</head>
+<body>
+    <main class="conteudo-principal">
+
+<form action="{% url 'produtos-delete' produto.slug %}" method="post">{% csrf_token %}
+    <p>Tem certeza que deseja excluir o produto "{{ object }}"?</p>
+    <p>Essa ação é irreverssível</p>
+    {{ form }}
+    <input type="submit" value="Confirmar exclusão permanente">
+</form>
+
+    </main>
+</body>
+</html>

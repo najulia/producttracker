@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Productracker</title>
+</head>
+<body>
+    <main class="conteudo-principal">
+        <div class="container_imagem-principal">
+            <img src="{% static 'ilustracao1.png' %}" class="imagem-principal" alt="Imagem inicial">
+        </div>
+
+        <div class="formulario-login">
+            <h1 class="logo">Productracker</h1>
+
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Login" class="button">
+            </form>
+            <!-- Link separado para cadastro -->
+            <a href="{% url 'cadastro' %}" class="button">Ainda não tenho conta</a>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% load static %}
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Usuários</title>
+</head>
+<body>
+    <main class="conteudo-principal">
+        <h1>Usuário deslogado com sucesso</h1>
+        <a href="{% url 'login' %}">Entrar novamente</a>
+    </main>
+</body>
+</html>

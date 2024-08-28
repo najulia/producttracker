@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Acesso Negado</title>
+</head>
+<body>
+    <main class="conteudo-principal">
+        <h1>403 Forbidden</h1>
+        <p>Você não tem permissão para acessar esta página.</p>
+        <p>Fale com o seu administrador</p>
+        <a href="{% url 'produto-list' %}" class="button">Voltar para a página inicial</a>
+    </main>
+</body>
+</html>

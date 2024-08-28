@@ -1,0 +1,7 @@
+{% if form.errors %}
+<h1>Tente novamente mais tarde =/ </h1>
+<a href="{% url 'login' %}">Voltar</a>
+{%else %}
+Someone asked for password reset for email {{ email }}. Follow the link below:
+{{ protocol}}://{{ domain }}{% url 'reset' uidb64=uid token=token %}
+{% endif %}

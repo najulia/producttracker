@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Cadastro</title>
+</head>
+<body>
+
+    <main class="conteudo-principal">
+
+    <form action="{% url 'cadastro' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Salvar Usuário">
+    </form>
+    
+    <a href="{% url 'login' %}">Voltar</a>
+    
+</main>
+</body>
+</html>
+

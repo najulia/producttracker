@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Usuários</title>
+</head>
+<body>
+    <main class="conteudo-principal">
+        <h1>Usuários</h1>
+        
+        {% if object_list %}
+            <ul class="lista-usuarios">
+                {% for user in object_list %}
+                    <li class= "item-lista">
+                        <a href="{% url 'usuarios-detail' user.id %}">Username: {{user.username}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No users yet</p>
+        {% endif %}
+
+        <a href="{% url 'cadastro' %}" class="button">Cadastrar usuário</a>
+
+        <form method="post" action="{% url 'logout' %}" class="logout-form">
+            {% csrf_token %}
+            <button type="submit" width="50%">Logout</button>
+        </form>
+        <button><a href="{% url 'produto-list' %}">Ver produtos</a></button>
+    </main>
+</body>
+</html>

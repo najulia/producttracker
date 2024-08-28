@@ -1,0 +1,146 @@
+/* Estilo geral do body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo do container principal */
+.conteudo-principal {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Estilo da imagem principal */
+.container_imagem-principal {
+    margin-bottom: 20px;
+}
+
+.imagem-principal {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Estilo do título do formulário de login */
+.formulario-login h1.logo {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo dos formulários */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Estilo dos botões e botões com link */
+input[type="submit"],
+button,
+a.button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+input[type="submit"]:hover,
+button:hover,
+a.button:hover {
+    background-color: #555;
+}
+
+/* Estilo dos links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/* Estilizando a lista de produtos */
+ul.lista-produtos {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.item-lista {
+    margin-bottom: 15px;
+}
+
+li.item-lista a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+li.item-lista a:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Estilo da imagem do produto */
+.produto-imagem {
+    max-width: 50%;
+    height: auto;
+    margin: 50px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Estilo para parágrafos de usuários inativos */
+.inactive-user {
+    background-color: #f8d7da; /* Cor de fundo mais clara para inativos */
+    color: #721c24; /* Cor do texto mais escura para contraste */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #f5c6cb; /* Borda com uma cor clara */
+}

@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Usuários</title>
+</head>
+<body>
+    <main class="conteudo-principal">
+
+    <h1>{{ object.username }}</h1>
+    <p>Nome:{{object.first_name}} {{object.last_name}}</p>
+    <p>E-mail:{{object.email}}</p>
+
+    {% if object.is_staff is True %}
+    <p>Usuário é staff</p>
+    {%else%}
+    <p>Usuário padrão</p>
+    {%endif%}
+    {% if object.is_active is True %}
+    <p>Usuário está ativo</p>
+    {%else%}
+    <p class="inactive-user">Usuário inativo</p>
+    {%endif%}
+    
+    <a href="{% url 'usuarios-update' user.id %}" class="button button-edit">Editar</a>
+    <a href="{% url 'usuarios-lista' %}">Voltar</a>
+
+    </main>
+</body>
+</html>

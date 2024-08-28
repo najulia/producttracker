@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Product Tracker</title>
+</head>
+<body>
+    <main class="conteudo-principal">
+        <h1>Produtos</h1>
+        <ul class="lista-produtos">
+            {% for produto in produto_list %}
+                <li class="item-lista"><a href="{% url 'produto-detail' produto.slug %}">
+                    {{ produto.titulo }} - R$ {{ produto.preco }} | 
+                    {{produto.quantidade}} em estoque
+                </a></li>
+            {% empty %}
+                <li>Ainda não há produtos</li>
+            {% endfor %}
+        </ul>
+
+        <div class="actions">
+            <a href="{% url 'produtos-create' %}" class="button">Cadastrar produto</a>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="button">Sair</button>
+            </form>
+            <button><a href="{% url 'usuarios-lista' %}">Ver usuários</a></button>
+        </div>
+    </main>
+</body>
+</html>

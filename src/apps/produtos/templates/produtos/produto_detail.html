@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Detalhes do produto</title>
+</head>
+<body>
+    <main class="conteudo-principal">
+
+    <h1>{{ object.titulo }}</h1>
+    <p>R$ {{ object.preco }} (unidade)</p>
+    <p> {{ object.descricao }}</p>
+    {% if object.foto == "" or object.foto == null %}
+    <img src="" class="produto-imagem" alt="Imagem">
+    {% else %}
+    <img src="{{ object.foto.url }}" class="produto-imagem" alt="Imagem">
+    {%endif%}
+    <p>{{produto.produto_em_estoque}}</p>
+    <a href="{% url 'produtos-update' produto.slug %}">Editar</a>
+    <a href="{% url 'produtos-delete' produto.slug %}">Excluir</a>
+    <a href="{% url 'produto-list' %}">Voltar</a>
+
+
+    </main>
+    
+</body>
+</html>
+
+
+
